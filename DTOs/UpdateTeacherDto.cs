@@ -1,0 +1,22 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace TeacherManagementApi.DTOs
+{
+    public class UpdateTeacherDto
+    {
+        [Required]
+        [StringLength(50)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [Required]
+        [StringLength(50)]
+        public string LastName { get; set; } = string.Empty;
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
+        public string Subject { get; set; } = string.Empty;
+    }
+}
